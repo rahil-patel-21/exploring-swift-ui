@@ -11,8 +11,42 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        VStack {
+            
+            Spacer()
+            
+            HStack (spacing: 5){
+                Spacer()
+                Text("Left Text").padding().background(Color.red)
+                Spacer()
+                Text("Right Text").padding().background(Color.yellow)
+                Spacer()
+            }
+            
+            Spacer()
+            
+            ZStack {
+                Image("war")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                Text("Center Text").padding().background(Color.green)
+            }
+            
+            Spacer()
+            
+            HStack (spacing: 5){
+                Spacer()
+                Text("Left Text").padding().background(Color.red)
+                Spacer()
+                Text("Right Text").padding().background(Color.yellow)
+                Spacer()
+            }
+                    
+            Spacer()
+        }
+        
+
     }
 }
 
