@@ -12,40 +12,39 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        VStack {
+        ZStack {
+            Image("background").ignoresSafeArea()
             
-            Spacer()
-            
-            HStack (spacing: 5){
+            VStack {
                 Spacer()
-                Text("Left Text").padding().background(Color.red)
-                Spacer()
-                Text("Right Text").padding().background(Color.yellow)
-                Spacer()
-            }
-            
-            Spacer()
-            
-            ZStack {
                 Image("war")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                Text("Center Text").padding().background(Color.green)
+                Spacer()
+                HStack {
+                    Spacer()
+                Image("card3")
+                    Spacer()
+                Image("card4")
+                    Spacer()
             }
-            
-            Spacer()
-            
-            HStack (spacing: 5){
                 Spacer()
-                Text("Left Text").padding().background(Color.red)
+                Image("dealbutton")
                 Spacer()
-                Text("Right Text").padding().background(Color.yellow)
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("Player").font(.headline).foregroundColor(Color.white).padding(.bottom,10)
+                        Text("0").font(.largeTitle).foregroundColor(Color.white)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("CPU").font(.headline).foregroundColor(Color.white).padding(.bottom,10)
+                        Text("0").font(.largeTitle).foregroundColor(Color.white)
+                    }
+                    Spacer()
+                }
                 Spacer()
-            }
-                    
-            Spacer()
         }
-        
+        }
 
     }
 }
