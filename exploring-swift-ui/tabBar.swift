@@ -7,18 +7,22 @@ struct TabBar: View {
         TabView {
             ForEach(Array(tabFields.enumerated()), id: \.element) { index, element in
                 NavigationView {
-                    if (index == 2) {
-                        VStack {
-                            ForEach(["IphoneX", "Mac"], id: \.self) {
-                                el in CartItemCard(name: el)
+                    if (index == 0) {
+                        ScrollView {
+                            VStack() {
+                                ForEach(["IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac","IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac"], id: \.self) {
+                                    el in CartItemCard(name: el)
+                                }
                             }
-                        } }
+                        }.frame(height: screenHeight * 0.8)
+                        
+                    }
                     
                     Text("Body")
                 }
                 .tag(index)
                 .tabItem {
-                    Text(tabFields[index])
+                    Text(element)
                 }
             }
         }
