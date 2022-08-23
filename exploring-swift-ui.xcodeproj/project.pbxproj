@@ -14,6 +14,7 @@
 		FE39FF8E28B17F7400B860F2 /* Dashboard-ui.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE39FF8D28B17F7400B860F2 /* Dashboard-ui.swift */; };
 		FE39FF9028B189DB00B860F2 /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE39FF8F28B189DB00B860F2 /* tabBar.swift */; };
 		FE39FF9428B1972B00B860F2 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE39FF9328B1972A00B860F2 /* utils.swift */; };
+		FE7A3F2D28B2AAEB00BEB7DD /* device_handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7A3F2C28B2AAEB00BEB7DD /* device_handler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,8 @@
 		FE39FF8D28B17F7400B860F2 /* Dashboard-ui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dashboard-ui.swift"; sourceTree = "<group>"; };
 		FE39FF8F28B189DB00B860F2 /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
 		FE39FF9328B1972A00B860F2 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		FE7A3F2A28B2A97300BEB7DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FE7A3F2C28B2AAEB00BEB7DD /* device_handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = device_handler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +60,8 @@
 		C40A5CB227A68DD4005A7320 /* exploring-swift-ui */ = {
 			isa = PBXGroup;
 			children = (
+				FE7A3F2B28B2AABC00BEB7DD /* Handler */,
+				FE7A3F2A28B2A97300BEB7DD /* Info.plist */,
 				C40A5CB327A68DD4005A7320 /* exploring_swift_uiApp.swift */,
 				C40A5CB527A68DD4005A7320 /* ContentView.swift */,
 				FE39FF8F28B189DB00B860F2 /* tabBar.swift */,
@@ -74,6 +79,14 @@
 				C40A5CBA27A68DD8005A7320 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE7A3F2B28B2AABC00BEB7DD /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A3F2C28B2AAEB00BEB7DD /* device_handler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7A3F2D28B2AAEB00BEB7DD /* device_handler.swift in Sources */,
 				FE39FF9428B1972B00B860F2 /* utils.swift in Sources */,
 				FE39FF8E28B17F7400B860F2 /* Dashboard-ui.swift in Sources */,
 				C40A5CB627A68DD4005A7320 /* ContentView.swift in Sources */,
@@ -284,6 +298,7 @@
 				DEVELOPMENT_TEAM = PN4SSS8D68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "exploring-swift-ui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +328,7 @@
 				DEVELOPMENT_TEAM = PN4SSS8D68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "exploring-swift-ui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

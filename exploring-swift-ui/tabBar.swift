@@ -1,4 +1,5 @@
 import SwiftUI
+import Contacts
 
 let tabFields: [String] = ["Home", "Explore", "Cart"]
 
@@ -10,9 +11,19 @@ struct TabBar: View {
                     if (index == 0) {
                         ScrollView {
                             VStack() {
-                                ForEach(["IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac","IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac"], id: \.self) {
-                                    el in CartItemCard(name: el)
+                                Button(action: {
+                                    do {
+                                        
+                                        DeviceHandler.fetchContacts()
+
+                                    } catch {}
+                                    
+                                }) {
+                                    Text("PRESS")
                                 }
+                                //                                ForEach(["IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac","IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac"], id: \.self) {
+                                //                                    el in CartItemCard(name: el)
+                                //                                }
                             }
                         }.frame(height: screenHeight * 0.8)
                         
