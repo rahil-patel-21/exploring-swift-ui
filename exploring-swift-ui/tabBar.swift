@@ -1,9 +1,9 @@
 import SwiftUI
-import Contacts
 
 let tabFields: [String] = ["Home", "Explore", "Cart"]
 
 struct TabBar: View {
+    @State private var contactList : [ContactModel] = []
     var body: some View {
         TabView {
             ForEach(Array(tabFields.enumerated()), id: \.element) { index, element in
@@ -12,22 +12,16 @@ struct TabBar: View {
                         ScrollView {
                             VStack() {
                                 Button(action: {
-                                    do {
-                                        
-                                        DeviceHandler.fetchContacts()
-
-                                    } catch {}
+                                    contactList =  DeviceHandler.fetchContacts();
                                     
                                 }) {
                                     Text("PRESS")
                                 }
-                                //                                ForEach(["IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac","IphoneX", "Mac","IphoneX","IphoneX", "Mac", "Mac"], id: \.self) {
-                                //                                    el in CartItemCard(name: el)
-                                //                                }
-                            }
-                        }.frame(height: screenHeight * 0.8)
-                        
-                    }
+                                ContactListView(contactList:contactList)
+                                ContactListView(contactList:contactList)
+                            }.frame(height: screenHeight * 0.8)
+                            
+                        }}
                     
                     Text("Body")
                 }
@@ -35,6 +29,17 @@ struct TabBar: View {
                 .tabItem {
                     Text(element)
                 }
+            }
+        }
+    }
+}
+
+struct ContactListView: View {
+    var contactList : [ContactModel];
+    var body: some View {
+        if (contactList.count > 0) {
+            ForEach(contactList) { contact in
+                Text(contact.firstName)
             }
         }
     }
